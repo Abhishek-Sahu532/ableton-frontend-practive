@@ -1,0 +1,168 @@
+/* nav part */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.MenuBtn {
+  display: none;
+}
+.desktop-navbar {
+  background-color: white;
+  position: sticky;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  /* align-items: center;
+  justify-items: center; */
+  flex-wrap: wrap;
+}
+.logo {
+  height: 50px;
+  width: 50px;
+  position: relative;
+
+}
+
+.desktop-navbar > nav > .menuLinkSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 8vmax;
+  gap: 22px;
+  font-size: 21px;
+  align-items: center;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+}
+
+nav .loginSection {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hideMenusection {
+  margin: 10px 20px;
+  /* margin-top: -20px; */
+  display: none;
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+}
+
+.hideMenusection .firstSection .linkSection {
+  display: flex;
+  gap: 20px;
+  margin-top: -15px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.textSection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.textSection > div {
+  width: 250px;
+
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 640px) {
+  .desktop-navbar{
+    /* background-color: blue; */
+    color: white;
+  }
+  .MenuBtn {
+    display: block;
+    padding-left: 25px;
+  }
+
+  .MenuBtn button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .desktop-navbar .firstChild {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+  
+nav {
+  display: flex;
+  flex-direction: column;
+}
+.desktop-navbar > nav > .menuLinkSection {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: auto;
+  display: none;
+
+}
+nav .loginSection {
+  margin-left: 0;
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: 400;
+  display: none;
+}
+
+.hideMenusection {
+  margin: 0;
+  /* margin-top: -20px; */
+  display: block;
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+  display: none;
+}
+
+.hideMenusection .firstSection .linkSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+.hideMenusection .firstSection .linkSection p{
+margin: 5px;
+}
+.textSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.textSection > div {
+  width: 100%;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+  line-height: 22px;
+}
+.textSection > div p{
+  margin: 0;
+  padding: 0
+}
+}
