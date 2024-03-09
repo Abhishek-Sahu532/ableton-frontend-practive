@@ -1,4 +1,9 @@
 /* nav part */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sen", sans-serif;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -10,7 +15,8 @@ a {
 }
 .desktop-navbar {
   background-color: white;
-  position: sticky;
+  position: fixed;
+  width: 100vw;
   padding: 10px;
   justify-content: space-between;
 }
@@ -25,7 +31,6 @@ nav {
   height: 50px;
   width: 50px;
   position: relative;
-
 }
 
 .desktop-navbar > nav > .menuLinkSection {
@@ -37,7 +42,6 @@ nav {
   font-size: 21px;
   align-items: center;
   font-weight: 600;
-  font-family: "Courier New", Courier, monospace;
 }
 
 nav .loginSection {
@@ -72,15 +76,13 @@ nav .loginSection {
 
 .textSection > div {
   width: 250px;
-
   font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
   font-weight: 100;
   line-height: 25px;
 }
 
 @media screen and (max-width: 640px) {
-  .desktop-navbar{
+  .desktop-navbar {
     /* background-color: blue; */
     color: white;
   }
@@ -102,67 +104,212 @@ nav .loginSection {
     display: flex;
     flex-direction: row;
     align-items: center;
-
   }
-  
-nav {
-  display: flex;
-  flex-direction: column;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .desktop-navbar > nav > .menuLinkSection {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-right: auto;
+    display: none;
+  }
+  nav .loginSection {
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 400;
+    display: none;
+  }
+
+  .hideMenusection {
+    margin: 0;
+    /* margin-top: -20px; */
+    display: block;
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+    display: none;
+  }
+
+  .hideMenusection .firstSection .linkSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .hideMenusection .firstSection .linkSection p {
+    margin: 5px;
+  }
+  .textSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-between;
+    margin-top: -20px;
+  }
+
+  .textSection > div {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 22px;
+  }
+  .textSection > div p {
+    margin: 0;
+    padding: 0;
+  }
 }
-.desktop-navbar > nav > .menuLinkSection {
-  display: flex;
-  flex-direction: column;
+
+/* BANNER SECTION */
+
+/* .banner-section{
+  box-sizing: border-box;
+} */
+
+.banner {
+  background-image: url("https://ableton-production.imgix.net/uploads/homepage-teasers/10_Ableton-Live_12-Release.jpg?fit=crop&auto=format&fm=jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.banner .text-section {
+  padding: 12vmax;
+  color: white;
+}
+
+.banner .text-section h2 {
+  padding: 0;
   margin: 0;
-  margin-right: auto;
-  display: none;
-
-}
-nav .loginSection {
-  margin-left: 0;
-  margin-right: auto;
-  font-size: 18px;
-  font-weight: 400;
-  display: none;
-}
-
-.hideMenusection {
-  margin: 0;
-  /* margin-top: -20px; */
-  display: block;
-  width: 100%;
-  height: auto;
-  /* background-color: red; */
-  display: none;
-}
-
-.hideMenusection .firstSection .linkSection {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  font-size: 18px;
+  font-size: 4vmax;
+  letter-spacing: 2px;
   font-weight: 300;
 }
-.hideMenusection .firstSection .linkSection p{
-margin: 5px;
-}
-.textSection {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow: hidden;
-  justify-content: space-between;
-  margin-top: -20px;
+
+.banner .text-section p {
+  margin-top: -0.5rem;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  letter-spacing: 1.5px;
 }
 
-.textSection > div {
-  width: 100%;
-  font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 100;
-  line-height: 22px;
+@media screen and (max-width: 850px) {
+  .banner .text-section {
+    padding: 16vmax;
+    color: white;
+  }
 }
-.textSection > div p{
-  margin: 0;
-  padding: 0
+
+@media screen and (max-width: 640px) {
+  .banner .text-section {
+    padding: 13vmax 6vmax;
+    color: white;
+  }
 }
+
+/* LEARN MORE SECTION */
+.learn-more {
+  margin-top: 6rem;
+  padding: 3rem;
+}
+.learn-more h2 {
+  padding: 0 3.5rem;
+  font-size: 2.5rem;
+}
+.learn-more .content-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 6rem;
+}
+
+.learn-more .content-div .parentDiv {
+  width: 300px;
+  height: 250px;
+}
+
+.learn-more .content-div .parentDiv > div > img {
+  object-fit: cover;
+  height: 250px;
+  width: 350px;
+}
+
+.learn-more .content-div .parentDiv > div > p {
+  font: 3rem;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 600px) {
+  .learn-more {
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+  .learn-more h2 {
+    padding: 0 1.5rem;
+    font-size: 2.5rem;
+  }
+  .learn-more .content-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+/* MORE LINKS */
+
+.more-links {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 6rem;
+  margin-top: 2rem;
+  align-items: center;
+  background-color: rgb(177, 174, 174);
+}
+
+.more-links h4{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.more-links div {
+  flex: 0 0 5;
+  padding: 10px;
+}
+
+.more-links a {
+  text-decoration: none;
+  color: rgb(97, 97, 179);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.more-links a:hover {
+  color: #666;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .more-links div {
+      flex: 0 0 3
+  }
+}
+
+/* Media query for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  .more-links div {
+      flex: 0 0 2
+  }
+}
+
+
+footer{
+  display: grid;
 }
