@@ -311,5 +311,105 @@ nav .loginSection {
 
 
 footer{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+
+}
+footer input{
+  border: 1px blue solid;
+  border-radius: 5px;
+  padding: 7px;
+  width: 19rem;
+}
+
+footer button{
+  border-radius: 5px;
+  padding: 7px;
+  width: 6rem;
+  margin-left: -0.4rem;
+  border: none;
+}
+footer .heading{
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.firstContainer{
   display: grid;
+  padding: 0 3rem;
+  grid-template-columns: minmax(300px, auto) 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  font-size: 1.1rem;
+}
+
+
+.secondContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+
+.secondContainer img{
+  width: 30px;
+  height: 30px;
+}
+
+.secondContainerOne{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* margin-top: 3rem; */
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+
+.secondContainerTwo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+  
+  }
+  
+  .firstContainer{
+    display: grid;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr ;
+  font-size: 1.1rem;
+  } 
+  
+  .secondContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:normal;
+    gap: 20px;
+    padding:1rem 0;
+  }
+
+  .secondContainerOne{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-top: 3rem; */
+  flex-wrap: wrap;
+  }
+  
 }
